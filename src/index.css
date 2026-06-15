@@ -344,19 +344,28 @@ body {
   background-clip: text;
 }
 
-/* ─── Service row hover ─── */
-.service-row {
+/* ─── Service card hover ─── */
+.service-card {
   display: flex;
-  align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--border-subtle);
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px 28px 28px 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   text-decoration: none;
   color: inherit;
+  position: relative;
+  overflow: hidden;
 }
-.service-row:hover { padding-left: 8px; }
-.service-row:last-child { border-bottom: none; }
+.service-card:hover {
+  background: var(--bg-elevated);
+  border-color: #3a3a3c;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
 
 /* ─── Process card ─── */
 .process-card {
